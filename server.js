@@ -143,8 +143,8 @@ async function addRole() {
       },
     ]);
     await db.query(
-      "INSERT INTO role (title, salary, department_id) VALUES (?);",
-      answers
+      "INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?);",
+      [answers.title, answers.salary, answers.department_id]
     );
     console.log("Role Added");
   } catch (err) {
@@ -187,8 +187,8 @@ async function addEmployee() {
       },
     ]);
     await db.query(
-      "INSERT INTO employee (first_name, last_name, role_id) VALUES (?);",
-      answers
+      "INSERT INTO employee (first_name, last_name, role_id) VALUES (?, ?, ?);",
+      [answers.first_name, answers.last_name, answers.role_id]
     );
     console.log("Employee Added");
   } catch (err) {

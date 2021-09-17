@@ -24,7 +24,6 @@ CREATE TABLE employee (
   role_id INT,
   first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR(30) NOT NULL,
-  salary DECIMAL NOT NULL,
   FOREIGN KEY (role_id)
     REFERENCES role(id)
     ON DELETE SET NULL,
