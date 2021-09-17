@@ -173,12 +173,11 @@ async function addEmployee() {
         message: "What is the employee's last name?",
         name: "last_name",
       },
-      // {
-      //   type: "input",
-      //   message: "Who is the employee's manager",
-      //   name: "role_id",
-      //   choices: roleChoices,
-      // },
+      {
+        type: "input",
+        message: "Who is the employee's manager",
+        name: "manager_name",
+      },
       {
         type: "list",
         message: "What role does this employee have.",
@@ -187,8 +186,13 @@ async function addEmployee() {
       },
     ]);
     await db.query(
-      "INSERT INTO employee (first_name, last_name, role_id) VALUES (?, ?, ?);",
-      [answers.first_name, answers.last_name, answers.role_id]
+      "INSERT INTO employee (first_name, last_name, manager_name, role_id) VALUES (?, ?, ?, ?);",
+      [
+        answers.first_name,
+        answers.last_name,
+        answers.manager_name,
+        answers.role_id,
+      ]
     );
     console.log("Employee Added");
   } catch (err) {
