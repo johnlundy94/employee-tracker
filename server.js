@@ -4,6 +4,15 @@ const util = require("util");
 require("console.table");
 require("dotenv").config();
 
+const db = mysql.createConnection({
+  host: process.env.DB_HOST,
+  // MySQL username,
+  user: process.env.DB_USER,
+  // TODO: Add MySQL password here
+  password: process.env.DB_PASS,
+  database: "company_db",
+});
+
 db.query = util.promisify(db.query);
 db.connect((err) => {
   if (err) {

@@ -11,3 +11,8 @@
 - When the user chooses to add an employee, they are prompted to enter, their first name, last name, role and manager.
 - These add choices are added to the database.
 - When the user chooses to update an employee, they are prompted to choose a new role for that employee.
+
+## GitHub and Video
+
+- Youtube link: https://www.youtube.com/watch?v=E-Ea0SzQEN0
+- GitHub Repo: https://github.com/johnlundy94/employee-tracker
