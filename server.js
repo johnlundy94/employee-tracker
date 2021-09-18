@@ -2,15 +2,7 @@ const inquirer = require("inquirer");
 const mysql = require("mysql2");
 const util = require("util");
 require("console.table");
-// Connect to database
-const db = mysql.createConnection({
-  host: "localhost",
-  // MySQL username,
-  user: "root",
-  // TODO: Add MySQL password here
-  password: "12219483980Eagle!",
-  database: "company_db",
-});
+require("dotenv").config();
 
 db.query = util.promisify(db.query);
 db.connect((err) => {
