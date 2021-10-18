@@ -1,0 +1,28 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "- When the application is started a menu appears asking whether the user wants to view departments, roles, employees, add a department, role, employee, or update an employee role.\r - When view department is selected a table showing department id and name appears.\r - When view roles is selected a table showing job title, role id, the department that role belongs to and the salary for that role appears.\r - When view employees is selected a table showing the employee id, first name, last name, job title, and manager for that employee appears.\r - When the user chooses to add a department, they are prompted to enter a name for that department.\r - When the user chooses to add a role, the user is prompted to enter the name of the role, salary, and department.\r - When the user chooses to add an employee, they are prompted to enter, their first name, last name, role and manager.\r - These add choices are added to the database.\r - When the user chooses to update an employee, they are prompted to choose a new role for that employee.",
+  "main": "server.js",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "dotenv": "^10.0.0",
+    "inquirer": "^8.1.3",
+    "mysql2": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnlundy94/employee-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnlundy94/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/johnlundy94/employee-tracker#readme"
+}
